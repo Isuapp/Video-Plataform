@@ -1,2 +1,2 @@
 # PlatziVideo
-Curso Practico de React con Plarzi
+Curso Practico de React con Platzi

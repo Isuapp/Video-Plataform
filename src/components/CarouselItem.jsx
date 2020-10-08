@@ -4,7 +4,7 @@ import '../assets/styles/components/CarouselItem.scss'
 const CarouselItem = ({ children }) => {
     return (
         <div className="carousel-item">
-            <img src="" alt="" className="carousel-item__img" />
+            <img src="../../public/images/foto-video.jpg" alt="" className="carousel-item__img" />
             <div className="carousel-item__details">
                 <div>
                     <img src="" alt="play icon" className="carousel-item__details--img"/>

@@ -4,16 +4,20 @@ import Home from '../containers/Home'
 import Login from '../containers/Login'
 import Register from '../containers/Register'
 import NoutFound from '../containers/NotFound';
+import Layout from '../components/Layout'
 
-const App = () => ( 
+const App = () => (
     <BrowserRouter>
-    <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route component={NoutFound} />
-    </Switch>
+        <Layout>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+                <Route component={NoutFound} />
+            </Switch>
+        </Layout>
+
     </BrowserRouter>
- );
- 
+);
+
 export default App;

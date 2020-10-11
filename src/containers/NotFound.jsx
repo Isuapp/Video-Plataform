@@ -1,6 +1,7 @@
 import React from 'react';
+import '../assets/styles/components/NotFound.scss'
 
-const NoutFound = () => {
+const NotFound = () => {
     return (
         <body className="bg-purple">
 
@@ -48,4 +49,4 @@ const NoutFound = () => {
     );
 }
 
-export default NoutFound;
+export default NotFound;

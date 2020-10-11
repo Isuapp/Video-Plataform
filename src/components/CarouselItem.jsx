@@ -1,19 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { setFavorite } from '../actions'
 import PropTypes from 'prop-types'
+import { setFavorite } from '../actions'
 import '../assets/styles/components/CarouselItem.scss'
-
 import playIcon from '../../src/assets/static/play-icon.png';
 import plusIcon from '../../src/assets/static/plus-icon.png';
+
 const CarouselItem = (props) => {
-    const {cover, title, year, contentRaiting, duration } = props;
+
+    const { cover, title, year, contentRaiting, duration } = props;
     const handleSetFavorite = () =>{
-        props.setFavorite(
-            {
+        props.setFavorite({
                 cover, title, year, contentRaiting, duration
-            })
+        })
     }
+
+
     return (
         <div className="carousel-item">
             <img src={cover} alt="" className="carousel-item__img" />

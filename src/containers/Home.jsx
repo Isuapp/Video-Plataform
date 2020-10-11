@@ -15,7 +15,13 @@ return(
     <Search />
     { myList.length > 0 &&
         <Categories title="Mi lista">
-            <Carousel ><CarouselItem /> </Carousel>
+            <Carousel >
+                {
+                    myList.map(item=>
+                        <CarouselItem key={item.id} {...item} />
+                        )
+                }
+            </Carousel>
         </Categories>
     }
     <Categories title="Tendencias">

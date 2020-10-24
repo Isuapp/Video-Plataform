@@ -1,31 +1,33 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import {loginRequest} from '../actions'
-import { Link } from 'react-router-dom'
-import googleIcon from '../assets/static/google-icon.png'
-import twitterIcon from '../assets/static/twitter-icon.png'
+import { Link } from 'react-router-dom';
+import { loginRequest } from '../actions'
+import googleIcon from '../assets/static/google-icon.png';
+import twitterIcon from '../assets/static/twitter-icon.png';
 
 
 // IMPORTANDO LOS ESTILOS
 import '../assets/styles/components/Login.scss'
 
 const Login = props => {
+    
 
     const [form, setValues]  = useState({
         email:'',
-    })
+    });
     const handleInput = event =>{
         setValues({
             ...form,
             [event.target.name] : event.target.value
         })
-    }
+    };
     const handleSubmit = event =>{
         event.preventDefault();
         console.log('Form=>', form);
         props.loginRequest(form);
-        props.history.push('/');
-    }
+        console.log('loginRequest', props.loginRequest(form))
+        props.history.push('/')
+    };
     return (
         <section className="login">
             <section className="login__container">
@@ -39,14 +41,15 @@ const Login = props => {
                         onChange={handleInput}
                     />
                     <input
-                    name="password"
+                        name="password"
                         className="input" 
                         type="password" 
                         placeholder="Contraseña" 
                         onChange={handleInput}
                      />
-                    <button className="button">Iniciar sesión</button>
+                    <button className="button" type="submit">Iniciar sesión</button>
                     <div className="login__container--remember-me">
+                        
                         <label>
                             <input type="checkbox" id="cbox1" value="first_checkbox" />Recuérdame
                         </label>
@@ -63,8 +66,8 @@ const Login = props => {
     );
 }
 
-const mapDsipatchToProps = {
+const mapDispatchToProps = {
     loginRequest,
 };
 
-export default connect(null, mapDsipatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);

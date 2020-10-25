@@ -4,8 +4,7 @@ import Footer from './Footer'
 
 const Layout = ({children}) =>  ( 
 
-    <div className="APP">
-        <Header/>
+    <div className="App">
             {children}
         <Footer/>
     </div>

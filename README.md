@@ -1,3 +1,2 @@
 # PlatziVideo
-Curso Practico de React con Platzi
-Proyecto acabado.
+Pequeño ensallo con React, redux y hooks

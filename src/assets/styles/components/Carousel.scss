@@ -3,6 +3,9 @@
     padding-left: 30px;
     width: 100%;
     position: relative;
+    overflow: auto;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
   }
   
   .carousel__container {
